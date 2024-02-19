@@ -1,0 +1,11 @@
+How to add a custom script to Codebeamer based on documentation https://codebeamer.com/cb/wiki/22229578
+( make sure your CB version is 22.04 or higher or it will not work ) 
+
+Step 1:	Configure your Codebeamer instance to accept custom scripts. Go to System Admin -> Application Configuration and add the following code at the end:
+
+"externalScripts" : {
+    "enabled" : true 
+}
+
+Step 2:	Create a script.js file inside your Codebeamer in codebeamer/repository/config/customization/js and put there your script.
+Step 3:	Restart your Codebeamer for the script to be applied. One way to do it would be to go inside codebeamer/tomcat/bin and run the shutdown.sh script ( for some version it seems there is also a script in codebeamer/bin called restart that's would also work ) 
